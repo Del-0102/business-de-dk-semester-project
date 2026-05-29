@@ -25,3 +25,4 @@ dist-ssr
 
 # Large video files — host separately
 public/videos/*.mp4
+public/videos/short 2.mp4
