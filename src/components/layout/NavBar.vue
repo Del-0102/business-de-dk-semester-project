@@ -5,7 +5,7 @@
 
       <!-- Logo -->
       <RouterLink to="/" class="logo">
-        <img src="/logos/logo-dark.png" alt="Business Region" class="logo-img" />
+        <img src="/logos/dark-logo.svg" alt="Business DE-DK — Cross-Border Business Network" class="logo-img" />
       </RouterLink>
 
       <!-- Centered nav links -->
@@ -230,6 +230,7 @@ onUnmounted(() => {
 }
 
 @media (max-width: 768px) {
+  .navbar-inner { justify-content: space-between; }
   .nav-overlay { display: block; }
   .hamburger { display: flex; }
   .nav-links {

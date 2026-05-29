@@ -3,7 +3,7 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <RouterLink to="/" class="footer-logo">
-          <img src="/logos/logo-light.png" alt="Business Region" class="footer-logo-img" />
+          <img src="/logos/white-logo.svg" alt="Business DE-DK — Cross-Border Business Network Denmark Germany" class="footer-logo-img" />
         </RouterLink>
         <p class="footer-tagline">{{ $t('footer.tagline') }}</p>
         <div class="footer-socials">
@@ -20,29 +20,29 @@
       </div>
 
       <div class="footer-col">
-        <h4>Pages</h4>
-        <RouterLink to="/network">Network</RouterLink>
-        <RouterLink to="/interviews">Interviews</RouterLink>
-        <RouterLink to="/events">Events</RouterLink>
-        <RouterLink to="/gallery">Gallery</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/advisors">Advisors</RouterLink>
-        <RouterLink to="/join">Become a Member</RouterLink>
+        <h4>{{ $t('footer.links') }}</h4>
+        <RouterLink to="/network">{{ $t('nav.network') }}</RouterLink>
+        <RouterLink to="/interviews">{{ $t('nav.interviews') }}</RouterLink>
+        <RouterLink to="/events">{{ $t('nav.events') }}</RouterLink>
+        <RouterLink to="/gallery">{{ $t('nav.gallery') }}</RouterLink>
+        <RouterLink to="/about">{{ $t('nav.about') }}</RouterLink>
+        <RouterLink to="/advisors">{{ $t('nav.advisors') }}</RouterLink>
+        <RouterLink to="/join">{{ $t('nav.join') }}</RouterLink>
       </div>
 
       <div class="footer-col">
-        <h4>Contact</h4>
+        <h4>{{ $t('footer.contact') }}</h4>
         <p>Vestergade 9<br>6270 Tønder, Denmark</p>
-        <a href="tel:+4521775916">+45 21 77 59 16</a>
-        <a href="mailto:info@business-region.eu">info@business-region.eu</a>
-        <RouterLink to="/newsletter">Newsletter</RouterLink>
+        <a href="tel:+4521775916" aria-label="Call Business DE-DK">+45 21 77 59 16</a>
+        <a href="mailto:info@business-region.eu" aria-label="Email Business DE-DK">info@business-region.eu</a>
+        <RouterLink to="/newsletter">{{ $t('nav.newsletter') }}</RouterLink>
       </div>
     </div>
 
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <p>Co-funded by the European Regional Development Fund via Interreg Deutschland-Danmark.</p>
-        <p>© {{ year }} Business DE-DK. All rights reserved.</p>
+        <p>{{ $t('footer.funded') }}</p>
+        <p>© {{ year }} Business DE-DK. {{ $t('footer.rights') }}</p>
       </div>
     </div>
   </footer>

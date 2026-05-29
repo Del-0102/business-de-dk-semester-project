@@ -56,6 +56,9 @@
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { events, eventTypes } from '../data/events.js'
+import { useSeoMeta } from '../composables/useSeoMeta.js'
+
+useSeoMeta('events.meta_title', 'events.meta_desc')
  
 const { t, locale } = useI18n()
 const activeType = ref('All')

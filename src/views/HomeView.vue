@@ -2,6 +2,10 @@
   <div>
     <!-- Hero -->
     <section class="home-hero">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source :src="`${base}videos/web.webm`" type="video/webm" />
+        <source :src="`${base}videos/web.mp4`" type="video/mp4" />
+      </video>
       <div class="hero-overlay"></div>
       <div class="container hero-content">
         <span class="hero-label anim-1">{{ t('home.hero_label') }}</span>
@@ -82,19 +86,19 @@
           </div>
           <div class="gallery-preview-mosaic" v-reveal="160">
             <div class="gp-tall">
-              <img src="https://business-region.eu/files/IMG_2316-scaled.jpg" alt="Business networking event" loading="lazy" />
+              <img src="https://business-region.eu/files/IMG_2316-scaled.jpg" alt="Business DE-DK networking event in the Danish-German border region" loading="lazy" />
             </div>
             <div class="gp-thumb">
-              <img src="https://business-region.eu/files/DSCF1527-scaled.jpg" alt="Business forum" loading="lazy" />
+              <img src="https://business-region.eu/files/DSCF1527-scaled.jpg" alt="Cross-border business forum Sonderjylland Schleswig-Holstein" loading="lazy" />
             </div>
             <div class="gp-thumb">
-              <img src="https://business-region.eu/files/DSCF2411-scaled.jpg" alt="Workshop session" loading="lazy" />
+              <img src="https://business-region.eu/files/DSCF2411-scaled.jpg" alt="Erhvervsnetvaerk workshop grænseregion Danmark-Tyskland" loading="lazy" />
             </div>
             <div class="gp-thumb">
-              <img src="https://business-region.eu/files/Toender-erhvervsraad-foto-35.png" alt="Networking event" loading="lazy" />
+              <img src="https://business-region.eu/files/Toender-erhvervsraad-foto-35.png" alt="Tønder Erhvervsråd netværksmøde Sønderjylland" loading="lazy" />
             </div>
             <div class="gp-thumb">
-              <img src="https://business-region.eu/files/499486693_122233284356231581_4383041403785374662_n.jpg" alt="Community gathering" loading="lazy" />
+              <img src="https://business-region.eu/files/499486693_122233284356231581_4383041403785374662_n.jpg" alt="Business DE-DK community gathering cross-border collaboration" loading="lazy" />
             </div>
           </div>
         </div>
@@ -125,7 +129,7 @@
           <div class="short-card" v-for="(clip, i) in clips" :key="i" v-reveal="i * 100">
             <div class="short-frame">
               <video class="short-vid" autoplay muted loop playsinline @error="handleVideoError">
-                <source :src="`/videos/${clip.filename}`" type="video/mp4" />
+                <source :src="`${base}videos/${clip.filename}`" type="video/mp4" />
               </video>
               <RouterLink :to="`/${clip.route}`" class="short-overlay">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -144,16 +148,19 @@
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRouter } from 'vue-router'
+import { useSeoMeta } from '../composables/useSeoMeta.js'
 
+useSeoMeta('home.meta_title', 'home.meta_desc')
 const { t } = useI18n()
+const base = import.meta.env.BASE_URL
 const router = useRouter()
 const search = ref('')
 const newsletterEmail = ref('')
 
 const clips = [
-  { filename: 'short1.mp4', route: 'insights', title: 'Business Insights', description: 'Expert perspectives on industry trends' },
-  { filename: 'short2.mp4', route: 'interviews', title: 'Success Stories', description: 'Inspiring entrepreneur interviews' },
-  { filename: 'short3.mp4', route: 'updates', title: 'Market Updates', description: 'Latest business region developments' },
+  { filename: 'short-1.mp4', route: 'interviews', title: 'Business Insights', description: 'Expert perspectives on industry trends' },
+  { filename: 'short-2.mp4', route: 'interviews', title: 'Success Stories', description: 'Inspiring entrepreneur interviews' },
+  { filename: 'short-3.mp4', route: 'interviews', title: 'Market Updates', description: 'Latest business region developments' },
 ]
 
 function goSearch() {
@@ -193,15 +200,24 @@ function handleVideoError(e) {
   overflow: hidden;
 }
 
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgba(13,22,40,0.80) 0%, rgba(13,22,40,0.70) 100%);
-  z-index: 0;
+  z-index: 1;
   pointer-events: none;
 }
 
-.hero-content { max-width: 680px; margin: 0 auto; position: relative; z-index: 2; }
+.hero-content { max-width: 680px; margin: 0 auto; position: relative; z-index: 2; padding-top: 0; }
 
 .hero-label {
   display: inline-block;
@@ -498,19 +514,7 @@ function handleVideoError(e) {
 }
 
 @media (max-width: 768px) {
-  .shorts-grid { 
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .short-title { font-size: 1rem; }
-  .short-desc { font-size: 0.85rem; }
-}
-
-@media (max-width: 480px) {
-  .shorts-grid { 
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
+  .offer-grid { grid-template-columns: 1fr; }
+  .shorts-section { display: none; }
 }
 </style>

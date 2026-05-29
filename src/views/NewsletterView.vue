@@ -65,7 +65,9 @@
 <script setup>
 import { ref, reactive, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useSeoMeta } from '../composables/useSeoMeta.js'
 
+useSeoMeta('newsletter.meta_title', 'newsletter.meta_desc')
 const { locale } = useI18n()
 
 function localized(value) {

@@ -13,6 +13,8 @@
     "social": "Sociale medier"
   },
   "home": {
+    "meta_title": "Business DE-DK | Grænseoverskridende erhvervsnetværk Danmark-Tyskland",
+    "meta_desc": "Business DE-DK forbinder virksomheder på tværs af den dansk-tyske grænse. Udforsk netværket, mediekanalen og regionale data.",
     "hero_title": "Forbinder virksomheder",
     "hero_sub": "Sammen om en stærkere region.",
     "search_placeholder": "Søg efter interessenter, arrangementer, interviews…",
@@ -63,6 +65,8 @@
     "gallery_cta": "Se alle billeder"
   },
   "network": {
+    "meta_title": "Erhvervsnetværk Sønderjylland | Business DE-DK",
+    "meta_desc": "Udforsk det grænseoverskridende erhvervsnetværk med virksomheder i Sønderjylland og Schleswig-Holstein. Bliv en del af DE-DK netværket.",
     "label": "Netværksdatabase",
     "title": "Vores medlemsnetværk",
     "sub": "Udforsk de virksomheder og organisationer, der former grænseoverskridende samarbejde.",
@@ -88,6 +92,8 @@
     "no_results": "Ingen medlemmer fundet."
   },
   "interviews": {
+    "meta_title": "Interviews & Mediekanal | Business DE-DK",
+    "meta_desc": "Se interviews med erhvervsledere fra den dansk-tyske grænseregion om grænseoverskridende erhvervssamarbejde og Interreg.",
     "label": "Mediekanal",
     "title": "Interviews & indsigter",
     "intro": "Se samtaler med erhvervsledere, eksperter og meningsdannere fra det dansk-tyske grænseområde.",
@@ -106,6 +112,8 @@
     "recent": "Seneste"
   },
   "events": {
+    "meta_title": "Arrangementer Sønderjylland | Business DE-DK",
+    "meta_desc": "Deltag i grænseoverskridende erhvervsarrangementer, workshops og netværksmøder i DE-DK regionen. Kommende events i Sønderjylland og Schleswig.",
     "label": "Arrangementer",
     "title": "Arrangementer & aktiviteter",
     "intro": "Deltag i netværksarrangementer, workshops og fora i det dansk-tyske grænseområde.",
@@ -121,6 +129,8 @@
     "date": "Dato"
   },
   "gallery": {
+    "meta_title": "Fotogalleri | Business DE-DK",
+    "meta_desc": "Billeder fra grænseoverskridende erhvervsarrangementer og netværksmøder i det dansk-tyske grænseområde. Øjeblikke fra DE-DK fællesskabet.",
     "label": "Galleri",
     "title": "Fotogalleri",
     "sub": "Øjeblikke fra vores arrangementer, møder og fællesskabsaktiviteter.",
@@ -138,6 +148,8 @@
     "share_success": "Tak for at du deler! Din historie hjælper andre i netværket."
   },
   "join": {
+    "meta_title": "Bliv Medlem Erhvervsnetværk | Business DE-DK",
+    "meta_desc": "Bliv en del af det grænseoverskridende erhvervsnetværk i Danmark og Tyskland. Få adgang til arrangementer, B2B matchmaking og markedsindsigter.",
     "label": "Medlemskab",
     "title": "Bliv medlem",
     "sub": "Bliv en del af et voksende grænseoverskridende erhvervsnetværk for fagfolk og eksperter i DE–DK-regionen.",
@@ -160,6 +172,8 @@
     "success": "Tak! Vi vender tilbage til dig hurtigst muligt."
   },
   "about": {
+    "meta_title": "Om os | Business DE-DK",
+    "meta_desc": "Business DE-DK styrker dansk-tysk erhvervssamarbejde via Interreg. Find partnere, opbyg netværk og skab vækst i grænseregionen.",
     "label": "Om os",
     "hero_title": "Udvid din virksomhed",
     "hero_title_cont": "Over grænsen",
@@ -197,11 +211,15 @@
     "funding_interreg": "Interreg Deutschland-Danmark"
   },
   "advisors": {
+    "meta_title": "Rådgivere & Team | Business DE-DK",
+    "meta_desc": "Mød teamet og det rådgivende udvalg bag grænseoverskridende erhvervssamarbejde mellem Danmark og Tyskland.",
     "label": "Rådgivere",
     "title": "Vores rådgivende udvalg",
     "sub": "Erfarne fagfolk, der guider Business DE-DK's strategiske retning."
   },
   "contact": {
+    "meta_title": "Kontakt | Business DE-DK",
+    "meta_desc": "Kontakt Business DE-DK. Vi forbinder virksomheder på tværs af den dansk-tyske grænse. Placeret i Tønder, Sønderjylland.",
     "label": "Kontakt",
     "title": "Tag kontakt",
     "sub": "Vi hører gerne fra dig. Kontakt os med spørgsmål, idéer eller partnerskabsmuligheder.",
@@ -221,6 +239,8 @@
     "success": "Din besked er sendt. Vi vender tilbage til dig snarest!"
   },
   "newsletter": {
+    "meta_title": "Nyhedsbrev | Business DE-DK",
+    "meta_desc": "Tilmeld dig Business DE-DK nyhedsbrevet for nyheder om grænseoverskridende erhverv, arrangementer og muligheder i DE-DK regionen.",
     "label": "Nyhedsbrev",
     "title": "Hold dig informeret",
     "sub": "Tilmeld dig for at modtage de seneste nyheder, arrangementer og muligheder fra DE–DK-erhvervsregionen.",
@@ -232,6 +252,8 @@
     "privacy": "Vi respekterer dit privatliv. Afmeld til enhver tid."
   },
   "social": {
+    "meta_title": "Følg os | Business DE-DK",
+    "meta_desc": "Følg Business DE-DK på sociale medier for de seneste nyheder fra erhvervslivet i den dansk-tyske grænseregion.",
     "label": "Sociale medier",
     "title": "Følg os",
     "sub": "Hold kontakten med Business DE-DK på sociale medier for de seneste opdateringer, nyheder og historier.",

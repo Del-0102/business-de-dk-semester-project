@@ -42,6 +42,9 @@
 
 <script setup>
 import { videos } from '../data/videos.js'
+import { useSeoMeta } from '../composables/useSeoMeta.js'
+
+useSeoMeta('social.meta_title', 'social.meta_desc')
 const latestVideos = videos.slice(0, 3)
 
 const socials = [

@@ -69,7 +69,7 @@
         <div class="team-grid">
           <RouterLink to="/advisors" class="team-card" v-for="(member, i) in team" :key="member.name" v-reveal="i * 90">
             <div class="team-avatar">
-              <img :src="member.photo" :alt="member.name" class="team-avatar-img" />
+              <img :src="`${base}${member.photo.slice(1)}`" :alt="member.name" class="team-avatar-img" />
             </div>
             <h4>{{ member.name }}</h4>
             <p class="team-role">{{ getTeamRole(member) }}</p>
@@ -86,7 +86,7 @@
         <h2 style="margin-bottom:2.5rem" v-reveal="60">Network Partners &amp; Sponsors</h2>
         <div class="sponsors-grid">
           <div class="sponsor-card" v-for="(s, i) in sponsors" :key="s.name" v-reveal="i * 60">
-            <img :src="s.logo" :alt="s.name" class="sponsor-logo" />
+            <img :src="`${base}${s.logo.slice(1)}`" :alt="s.name" class="sponsor-logo" />
           </div>
         </div>
       </div>
@@ -174,9 +174,13 @@
 import { ref, reactive, onMounted, computed } from 'vue'
 import { RouterLink, useRouter } from 'vue-router'
 import { useI18n } from 'vue-i18n'
+import { useSeoMeta } from '../composables/useSeoMeta.js'
+
+useSeoMeta('about.meta_title', 'about.meta_desc')
 
 const router = useRouter()
 const { t, locale } = useI18n()
+const base = import.meta.env.BASE_URL
 
 const statsCardRef = ref(null)
 

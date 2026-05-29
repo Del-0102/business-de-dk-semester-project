@@ -92,7 +92,9 @@
 <script setup>
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useSeoMeta } from '../composables/useSeoMeta.js'
 
+useSeoMeta('gallery.meta_title', 'gallery.meta_desc')
 useI18n()
 const lightbox = ref(null)
 const shareSubmitted = ref(false)
@@ -103,13 +105,13 @@ function submitShare() {
 }
 
 const gallery = [
-  { src: 'https://business-region.eu/files/IMG_2316-scaled.jpg', caption: 'Cross-border networking event, Tønder 2025', large: true },
-  { src: 'https://business-region.eu/files/DSCF1527-scaled.jpg', caption: 'Business forum, Southern Jutland' },
-  { src: 'https://business-region.eu/files/DSCF2411-scaled.jpg', caption: 'Workshop session, Flensburg' },
-  { src: 'https://business-region.eu/files/oender-erhvervsraad-foto-1.png', caption: 'Tønder Erhvervsråd annual meeting' },
-  { src: 'https://business-region.eu/files/Toender-erhvervsraad-foto-35.png', caption: 'Tønder Business Council', large: true },
-  { src: 'https://business-region.eu/files/499486693_122233284356231581_4383041403785374662_n.jpg', caption: 'Networking breakfast, Sønderjylland' },
-  { src: 'https://business-region.eu/files/dhfdhd.jpg', caption: 'DE-DK Partnership forum' },
+  { src: 'https://business-region.eu/files/IMG_2316-scaled.jpg', caption: 'Business DE-DK cross-border networking event, Tønder Sønderjylland 2025', large: true },
+  { src: 'https://business-region.eu/files/DSCF1527-scaled.jpg', caption: 'Grænseoverskridende erhvervsforum — dansk-tysk erhvervssamarbejde Syddanmark' },
+  { src: 'https://business-region.eu/files/DSCF2411-scaled.jpg', caption: 'Business DE-DK workshop Flensburg Schleswig-Holstein' },
+  { src: 'https://business-region.eu/files/oender-erhvervsraad-foto-1.png', caption: 'Tønder Erhvervsråd generalforsamling — erhvervsnetværk Sønderjylland' },
+  { src: 'https://business-region.eu/files/dhfdhd.jpg', caption: 'Interreg Deutschland-Danmark partnership forum grænseregion' },
+  { src: 'https://business-region.eu/files/Toender-erhvervsraad-foto-35.png', caption: 'Tønder Business Council — dansk-tysk erhvervsråd grænseregion', large: true },
+  { src: 'https://business-region.eu/files/499486693_122233284356231581_4383041403785374662_n.jpg', caption: 'Business DE-DK networking breakfast Sønderjylland — B2B netværk grænseregion' },
 ]
 
 const testimonials = [

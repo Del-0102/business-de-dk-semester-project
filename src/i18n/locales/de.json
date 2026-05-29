@@ -13,6 +13,8 @@
     "social": "Social Media"
   },
   "home": {
+    "meta_title": "Business DE-DK | Grenzüberschreitendes Unternehmensnetzwerk Deutschland-Dänemark",
+    "meta_desc": "Business DE-DK vernetzt Unternehmen an der deutsch-dänischen Grenze. Entdecken Sie das Netzwerk, den Medienkanal und regionale Daten.",
     "hero_title": "Unternehmen verbinden",
     "hero_sub": "Gemeinsam für eine stärkere Region.",
     "search_placeholder": "Stakeholder, Veranstaltungen, Interviews suchen…",
@@ -63,6 +65,8 @@
     "gallery_cta": "Alle Fotos ansehen"
   },
   "network": {
+    "meta_title": "Netzwerk Unternehmen Schleswig-Holstein | Business DE-DK",
+    "meta_desc": "Entdecken Sie das grenzüberschreitende Netzwerk mit Unternehmen in Schleswig-Holstein und Süddänemark. Dem DE-DK Netzwerk beitreten.",
     "label": "Netzwerkdatenbank",
     "title": "Unser Mitgliedsnetzwerk",
     "sub": "Entdecken Sie die Unternehmen und Organisationen, die grenzüberschreitende Zusammenarbeit gestalten.",
@@ -88,6 +92,8 @@
     "no_results": "Keine Mitglieder gefunden."
   },
   "interviews": {
+    "meta_title": "Interviews & Medienkanal | Business DE-DK",
+    "meta_desc": "Sehen Sie Interviews mit Unternehmensführern aus der deutsch-dänischen Grenzregion zur grenzüberschreitenden Wirtschaftskooperation.",
     "label": "Medienkanal",
     "title": "Interviews & Einblicke",
     "intro": "Sehen Sie Gespräche mit Unternehmensführern, Experten und Vordenkern aus der DE–DK-Grenzregion.",
@@ -106,6 +112,8 @@
     "recent": "Neueste"
   },
   "events": {
+    "meta_title": "Wirtschaftsveranstaltungen Schleswig Flensburg | Business DE-DK",
+    "meta_desc": "Nehmen Sie an grenzüberschreitenden Unternehmensveranstaltungen, Workshops und Networking in der DE-DK-Region teil.",
     "label": "Veranstaltungen",
     "title": "Veranstaltungen & Aktivitäten",
     "intro": "Nehmen Sie an Networking-Events, Workshops und Foren in der DE–DK-Grenzregion teil.",
@@ -121,6 +129,8 @@
     "date": "Datum"
   },
   "gallery": {
+    "meta_title": "Fotogalerie | Business DE-DK",
+    "meta_desc": "Fotos von grenzüberschreitenden Unternehmensveranstaltungen und Networking in der deutsch-dänischen Grenzregion.",
     "label": "Galerie",
     "title": "Fotogalerie",
     "sub": "Momente von unseren Veranstaltungen, Treffen und Gemeinschaftsaktivitäten.",
@@ -138,6 +148,8 @@
     "share_success": "Vielen Dank fürs Teilen! Ihre Geschichte hilft anderen im Netzwerk."
   },
   "join": {
+    "meta_title": "Deutsch-dänisches Wirtschaftsnetzwerk beitreten | Business DE-DK",
+    "meta_desc": "Werden Sie Teil des grenzüberschreitenden Unternehmensnetzwerks in Deutschland und Dänemark. Zugang zu Events, B2B-Matchmaking und Marktdaten.",
     "label": "Mitgliedschaft",
     "title": "Mitglied werden",
     "sub": "Treten Sie einem wachsenden grenzüberschreitenden Unternehmensnetzwerk für Fachleute und Experten in der DE–DK-Region bei.",
@@ -160,6 +172,8 @@
     "success": "Vielen Dank! Wir werden uns in Kürze bei Ihnen melden."
   },
   "about": {
+    "meta_title": "Über uns | Business DE-DK",
+    "meta_desc": "Business DE-DK stärkt die deutsch-dänische Wirtschaftskooperation via Interreg. Partner finden, Netzwerke aufbauen, Wachstum in der Grenzregion schaffen.",
     "label": "Über uns",
     "hero_title": "Erweitern Sie Ihr Geschäft",
     "hero_title_cont": "Über die Grenze hinweg",
@@ -197,11 +211,15 @@
     "funding_interreg": "Interreg Deutschland-Danmark"
   },
   "advisors": {
+    "meta_title": "Beirat & Team | Business DE-DK",
+    "meta_desc": "Lernen Sie das Team und den Beirat kennen, der die grenzüberschreitende Wirtschaftskooperation zwischen Deutschland und Dänemark vorantreibt.",
     "label": "Beirat",
     "title": "Unser Beirat",
     "sub": "Erfahrene Fachleute, die die strategische Ausrichtung von Business DE-DK leiten."
   },
   "contact": {
+    "meta_title": "Kontakt | Business DE-DK",
+    "meta_desc": "Kontaktieren Sie Business DE-DK. Wir verbinden Unternehmen in der deutsch-dänischen Grenzregion. Standort: Tonder, Süddänemark.",
     "label": "Kontakt",
     "title": "Kontakt aufnehmen",
     "sub": "Wir freuen uns von Ihnen zu hören. Kontaktieren Sie uns bei Fragen, Ideen oder Partnerschaftsanfragen.",
@@ -221,6 +239,8 @@
     "success": "Ihre Nachricht wurde gesendet. Wir melden uns bald!"
   },
   "newsletter": {
+    "meta_title": "Newsletter | Business DE-DK",
+    "meta_desc": "Abonnieren Sie den Business DE-DK Newsletter für grenzüberschreitende Wirtschaftsnews, Veranstaltungen und Möglichkeiten in der DE-DK Region.",
     "label": "Newsletter",
     "title": "Informiert bleiben",
     "sub": "Abonnieren Sie unseren Newsletter für aktuelle Nachrichten, Veranstaltungseinladungen und Möglichkeiten.",
@@ -232,6 +252,8 @@
     "privacy": "Wir respektieren Ihre Privatsphäre. Jederzeit abmeldbar."
   },
   "social": {
+    "meta_title": "Folgen Sie uns | Business DE-DK",
+    "meta_desc": "Folgen Sie Business DE-DK in Social Media für aktuelle News aus der Wirtschaft der deutsch-dänischen Grenzregion.",
     "label": "Social Media",
     "title": "Folgen Sie uns",
     "sub": "Bleiben Sie mit Business DE-DK in Social Media verbunden für aktuelle Updates, Neuigkeiten und Geschichten.",

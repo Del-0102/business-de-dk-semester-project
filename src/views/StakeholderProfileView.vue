@@ -21,7 +21,7 @@
         <!-- Right column: large logo -->
         <div class="profile-hero-right">
           <div class="profile-logo-circle">
-            <img :src="member.logo" :alt="member.name" class="profile-logo-img" />
+            <img :src="`${base}${member.logo.slice(1)}`" :alt="member.name" class="profile-logo-img" />
           </div>
         </div>
       </div>
@@ -94,14 +94,28 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, watchEffect } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 import { members } from '../data/members.js'
 
 const { t, locale } = useI18n()
+const base = import.meta.env.BASE_URL
 const route = useRoute()
 const member = computed(() => members.find(m => m.id === Number(route.params.id)))
+
+watchEffect(() => {
+  const name = member.value?.name ?? 'Member Profile'
+  const title = `${name} | Business DE-DK`
+  const desc = member.value
+    ? `${name} — ${member.value.sector ?? ''} in the cross-border business network DE-DK. Interreg Deutschland-Danmark.`
+    : 'Member profile — Business DE-DK cross-border business network.'
+  document.title = title
+  let el = document.querySelector('meta[name="description"]')
+  if (!el) { el = document.createElement('meta'); el.name = 'description'; document.head.appendChild(el) }
+  el.content = desc
+  document.documentElement.lang = locale.value
+})
 const pageUrl = computed(() => encodeURIComponent(window.location.href))
 
 function localized(value) {
@@ -186,14 +200,14 @@ function catLabel(v) {
 }
 
 .profile-logo-circle {
-  width: 180px;
-  height: 180px;
+  width: 240px;
+  height: 240px;
   border-radius: 50%;
   background: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.25rem;
+  padding: 1.75rem;
   box-shadow: 0 8px 40px rgba(0,0,0,0.25);
   overflow: hidden;
 }
@@ -326,8 +340,8 @@ function catLabel(v) {
     gap: 1.5rem;
   }
   .profile-logo-circle {
-    width: 100px;
-    height: 100px;
+    width: 130px;
+    height: 130px;
     align-self: flex-end;
     position: absolute;
     top: 1.5rem;
@@ -339,6 +353,6 @@ function catLabel(v) {
 }
 
 @media (max-width: 600px) {
-  .profile-logo-circle { width: 80px; height: 80px; padding: 0.75rem; }
+  .profile-logo-circle { width: 100px; height: 100px; padding: 0.75rem; }
 }
 </style>

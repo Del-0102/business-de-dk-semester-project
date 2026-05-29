@@ -77,7 +77,9 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
+import { useSeoMeta } from '../composables/useSeoMeta.js'
 
+useSeoMeta('join.meta_title', 'join.meta_desc')
 const done = ref(false)
 const form = reactive({ name: '', company: '', email: '', phone: '', country: '', sector: '', message: '' })
 const benefits = [

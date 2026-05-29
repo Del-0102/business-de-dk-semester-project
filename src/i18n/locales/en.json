@@ -13,6 +13,8 @@
     "social": "Social Media"
   },
   "home": {
+    "meta_title": "Business DE-DK | Cross-Border Business Network Denmark Germany",
+    "meta_desc": "Business DE-DK connects businesses across the Danish-German border. Explore the network, media channel, and regional data.",
     "hero_title": "Connecting Businesses",
     "hero_sub": "Together for a stronger region.",
     "search_placeholder": "Search stakeholders, events, interviews…",
@@ -63,6 +65,8 @@
     "gallery_cta": "View all photos"
   },
   "network": {
+    "meta_title": "Cross-Border Business Network | Business DE-DK",
+    "meta_desc": "Explore the cross-border business network connecting professionals in southern Denmark and Schleswig-Holstein. Join the DE-DK network.",
     "label": "Network Database",
     "title": "Our Member Network",
     "sub": "Explore the businesses and organisations shaping cross-border cooperation.",
@@ -88,6 +92,8 @@
     "no_results": "No members found."
   },
   "interviews": {
+    "meta_title": "Interviews & Media Channel | Business DE-DK",
+    "meta_desc": "Watch interviews with business leaders from the Danish-German border region. Insights on cross-border business cooperation and Interreg.",
     "label": "Media Channel",
     "title": "Interviews & Insights",
     "intro": "Watch conversations with business leaders, experts, and changemakers from the DE–DK border region.",
@@ -106,6 +112,8 @@
     "recent": "Most Recent"
   },
   "events": {
+    "meta_title": "Events & Activities | Business DE-DK",
+    "meta_desc": "Join cross-border business events, workshops, and networking in the Denmark-Germany border region. Upcoming events in Sonderjylland and Schleswig.",
     "label": "Events",
     "title": "Events & Activities",
     "intro": "Join us for networking events, workshops, and forums in the DE–DK border region.",
@@ -121,6 +129,8 @@
     "date": "Date"
   },
   "gallery": {
+    "meta_title": "Photo Gallery | Business DE-DK",
+    "meta_desc": "Photos from cross-border business events, forums, and networking in the Denmark-Germany border region. Real moments from the DE-DK community.",
     "label": "Gallery",
     "title": "Photo Gallery",
     "sub": "Moments from our events, meetings, and community activities.",
@@ -138,6 +148,8 @@
     "share_success": "Thank you for sharing! Your story helps inspire others in the network."
   },
   "join": {
+    "meta_title": "Join Business Network Border Region | Business DE-DK",
+    "meta_desc": "Join the cross-border business network for professionals in Denmark and Germany. Access events, B2B matchmaking, and market insights.",
     "label": "Membership",
     "title": "Become a Member",
     "sub": "Join a growing cross-border business network for professionals and experts in the DE–DK region.",
@@ -160,6 +172,8 @@
     "success": "Thank you! We will be in touch shortly."
   },
   "about": {
+    "meta_title": "About Us | Business DE-DK",
+    "meta_desc": "Business DE-DK strengthens Danish-German business cooperation funded by Interreg. Find partners, build networks, and create growth across the border.",
     "label": "About Us",
     "hero_title": "Expand Your Business",
     "hero_title_cont": "Across the Border",
@@ -197,11 +211,15 @@
     "funding_interreg": "Interreg Deutschland-Danmark"
   },
   "advisors": {
+    "meta_title": "Leadership & Advisors | Business DE-DK",
+    "meta_desc": "Meet the team and advisory board driving cross-border business collaboration between Denmark and Germany via Interreg.",
     "label": "Our Team",
     "title": "Leadership & Team",
     "sub": "Dedicated professionals driving cross-border business collaboration and innovation."
   },
   "contact": {
+    "meta_title": "Contact | Business DE-DK",
+    "meta_desc": "Get in touch with Business DE-DK. We connect businesses across the Danish-German border region. Located in Tonder, southern Denmark.",
     "label": "Contact",
     "title": "Get in Touch",
     "sub": "We'd love to hear from you. Reach out with questions, ideas, or partnership opportunities.",
@@ -221,6 +239,8 @@
     "success": "Your message has been sent. We'll get back to you soon!"
   },
   "newsletter": {
+    "meta_title": "Newsletter | Business DE-DK",
+    "meta_desc": "Subscribe to the Business DE-DK newsletter for cross-border business news, events, and opportunities in the Denmark-Germany border region.",
     "label": "Newsletter",
     "title": "Stay Informed",
     "sub": "Subscribe to receive the latest news, event invitations, and opportunities from the DE–DK business region.",
@@ -232,6 +252,8 @@
     "privacy": "We respect your privacy. Unsubscribe at any time."
   },
   "social": {
+    "meta_title": "Follow Us | Business DE-DK",
+    "meta_desc": "Follow Business DE-DK on social media for the latest cross-border business news and updates from the Denmark-Germany border region.",
     "label": "Social Media",
     "title": "Follow Us",
     "sub": "Stay connected with Business DE-DK on social media for the latest updates, news, and stories.",

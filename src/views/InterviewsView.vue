@@ -29,8 +29,8 @@
           <div v-for="n in 3" :key="n" class="short-card" @click="activeShort = n">
             <div class="short-num">0{{ n }}</div>
             <div class="short-frame">
-              <video class="short-vid" autoplay muted loop playsinline>
-                <source :src="`/videos/short_${n}.mp4`" type="video/mp4" />
+              <video class="short-vid" muted playsinline preload="metadata" @loadedmetadata="e => e.target.currentTime = 0.1">
+                <source :src="`${base}videos/short-${n}.mp4`" type="video/mp4" />
               </video>
               <div class="short-overlay">
                 <div class="short-play-circle">
@@ -53,8 +53,8 @@
       <div v-if="activeShort" class="modal-overlay" @click.self="activeShort = null">
         <div class="shorts-modal-box">
           <button class="modal-close" @click="activeShort = null">✕</button>
-          <video :key="activeShort" class="shorts-modal-vid" controls autoplay playsinline>
-            <source :src="`/videos/short_${activeShort}.mp4`" type="video/mp4" />
+          <video :key="activeShort" class="shorts-modal-vid" controls playsinline>
+            <source :src="`${base}videos/short-${activeShort}.mp4`" type="video/mp4" />
           </video>
         </div>
       </div>
@@ -135,8 +135,12 @@
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { videos, videoTopics } from '../data/videos.js'
+import { useSeoMeta } from '../composables/useSeoMeta.js'
+
+useSeoMeta('interviews.meta_title', 'interviews.meta_desc')
  
 const { t, locale } = useI18n()
+const base = import.meta.env.BASE_URL
 const activeTopic = ref('All')
 const sort = ref('latest')
 const activeVideo = ref(null)
@@ -500,7 +504,7 @@ function openVideo(v) { activeVideo.value = v }
   align-items: center;
   gap: 0.6rem;
   padding: 0.75rem 2rem;
-  background: #FF0000;
+  background: var(--navy);
   color: #fff;
   font-weight: 700;
   font-size: 0.92rem;

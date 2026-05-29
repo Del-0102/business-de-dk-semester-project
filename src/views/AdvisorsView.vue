@@ -13,7 +13,7 @@
         <div class="grid-3">
           <div class="card advisor-card" v-for="a in advisors" :key="a.name">
             <div class="advisor-avatar">
-              <img :src="a.photo" :alt="a.name" class="advisor-avatar-img" />
+              <img :src="`${base}${a.photo.slice(1)}`" :alt="a.name" class="advisor-avatar-img" />
             </div>
             <div class="advisor-body">
               <h3>{{ a.name }}</h3>
@@ -35,8 +35,11 @@
 <script setup>
 import { useI18n } from 'vue-i18n'
 import { advisors } from '../data/advisors.js'
+import { useSeoMeta } from '../composables/useSeoMeta.js'
 
+useSeoMeta('advisors.meta_title', 'advisors.meta_desc')
 const { t, locale } = useI18n()
+const base = import.meta.env.BASE_URL
 
 function getTitle(advisor) {
   const key = `${locale.value}` 

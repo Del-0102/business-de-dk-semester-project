@@ -78,6 +78,9 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
+import { useSeoMeta } from '../composables/useSeoMeta.js'
+
+useSeoMeta('contact.meta_title', 'contact.meta_desc')
 const sent = ref(false)
 const form = reactive({ name: '', email: '', subject: '', message: '' })
 function submitForm() { sent.value = true }

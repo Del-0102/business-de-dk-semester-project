@@ -28,7 +28,7 @@
     </div>
  
     <!-- Members -->
-    <div class="container" style="padding-top: 0.75rem; padding-bottom: 3rem;">
+    <div class="container" style="padding-top: 0.75rem; padding-bottom: 3rem; overflow: hidden;">
       <div class="members-meta">
         <span>{{ $t('network.showing') }} {{ filtered.length }} {{ $t('network.members') }}</span>
         <span>{{ $t('network.sort_by') }}</span>
@@ -43,7 +43,7 @@
         >
           <div class="member-top">
             <div class="member-avatar">
-              <img :src="m.logo" :alt="m.name" class="member-logo" />
+              <img :src="`${base}${m.logo.slice(1)}`" :alt="m.name" class="member-logo" />
             </div>
             <div class="member-info">
               <div class="member-name-row">
@@ -72,8 +72,12 @@ import { ref, computed, onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useRoute } from 'vue-router'
 import { members, sectors } from '../data/members.js'
+import { useSeoMeta } from '../composables/useSeoMeta.js'
+
+useSeoMeta('network.meta_title', 'network.meta_desc')
  
 const { t, locale } = useI18n()
+const base = import.meta.env.BASE_URL
 const route = useRoute()
 const search = ref(route.query.q || '')
 const activeFilter = ref('All')
@@ -116,6 +120,11 @@ const filtered = computed(() => members.filter(m => {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
+  width: 100%;
+}
+
+.members-grid > * {
+  min-width: 0;
 }
  
 .member-card {
@@ -134,8 +143,8 @@ const filtered = computed(() => members.filter(m => {
   align-items: flex-start;
 }
 .member-avatar {
-  width: 52px;
-  height: 52px;
+  width: 80px;
+  height: 80px;
   border-radius: var(--radius-sm);
   background: var(--white);
   border: 1px solid var(--grey-200);
