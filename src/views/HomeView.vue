@@ -122,16 +122,17 @@
         <p class="section-label" v-reveal>Quick Clips</p>
         <h2 v-reveal="60">Quick Clips from the Field</h2>
         <div class="shorts-grid">
-          <div class="short-card" v-for="n in 3" :key="n" v-reveal="(n-1) * 100">
+          <div class="short-card" v-for="(clip, i) in clips" :key="i" v-reveal="i * 100">
             <div class="short-frame">
               <video class="short-vid" autoplay muted loop playsinline @error="handleVideoError">
-                <source :src="`/videos/short${n}.mp4`" type="video/mp4" />
+                <source :src="`/videos/${clip.filename}`" type="video/mp4" />
               </video>
-              <RouterLink :to="`/short${n}`" class="short-overlay">
+              <RouterLink :to="`/${clip.route}`" class="short-overlay">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg>
               </RouterLink>
             </div>
-            <p class="short-title">Clip {{ n }}</p>
+            <p class="short-title">{{ clip.title }}</p>
+            <p class="short-desc">{{ clip.description }}</p>
           </div>
         </div>
       </div>
@@ -149,13 +150,10 @@ const router = useRouter()
 const search = ref('')
 const newsletterEmail = ref('')
 
-const focusAreas = [
-  { num: '01', titleKey: 'home.focus.data_title',        descKey: 'home.focus.data_desc' },
-  { num: '02', titleKey: 'home.focus.network_title',     descKey: 'home.focus.network_desc' },
-  { num: '03', titleKey: 'home.focus.visibility_title',  descKey: 'home.focus.visibility_desc' },
-  { num: '04', titleKey: 'home.focus.council_title',     descKey: 'home.focus.council_desc' },
-  { num: '05', titleKey: 'home.focus.talent_title',      descKey: 'home.focus.talent_desc' },
-  { num: '06', titleKey: 'home.focus.development_title', descKey: 'home.focus.development_desc' },
+const clips = [
+  { filename: 'short1.mp4', route: 'insights', title: 'Business Insights', description: 'Expert perspectives on industry trends' },
+  { filename: 'short2.mp4', route: 'interviews', title: 'Success Stories', description: 'Inspiring entrepreneur interviews' },
+  { filename: 'short3.mp4', route: 'updates', title: 'Market Updates', description: 'Latest business region developments' },
 ]
 
 function goSearch() {
@@ -431,19 +429,24 @@ function handleVideoError(e) {
 .newsletter-form .btn-dark:hover { background: var(--grey-100); border-color: var(--grey-100); }
 
 /* ── Shorts Section ── */
-.shorts-section { background: var(--white); }
+.shorts-section { background: var(--white); padding: 3rem 0; }
 
 .shorts-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
   margin-top: 2rem;
 }
 
 .short-card {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.short-card:hover {
+  transform: translateY(-8px);
 }
 
 .short-frame {
@@ -451,11 +454,13 @@ function handleVideoError(e) {
   overflow: hidden;
   border-radius: var(--radius-lg);
   background: var(--navy);
+  aspect-ratio: 9/16;
+  width: 100%;
 }
 
 .short-vid {
   width: 100%;
-  aspect-ratio: 9/16;
+  height: 100%;
   object-fit: cover;
   display: block;
 }
@@ -479,15 +484,33 @@ function handleVideoError(e) {
 }
 
 .short-title {
-  font-size: 0.95rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--text);
+  margin: 0;
+}
+
+.short-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {
-  .shorts-grid { grid-template-columns: 1fr; }
-  .offer-grid { grid-template-columns: 1fr; }
-  .focus-grid { grid-template-columns: repeat(2, 1fr); }
-  .gallery-preview-layout { grid-template-columns: 1fr; }
+  .shorts-grid { 
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .short-title { font-size: 1rem; }
+  .short-desc { font-size: 0.85rem; }
+}
+
+@media (max-width: 480px) {
+  .shorts-grid { 
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 </style>
